@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "2e6ed587-d92b-4ab4-a69c-c0eec8726c58",
+		"name": "song",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file_type\": \"audiobook\",\n    \"meta_data\":{\n            \"title\": \"hello\",\n            \"author\": \"some author\",\n            \"narrator\": \"some narrator\",\n            \"duration\": 200,\n            \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\"\n        }\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/create/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Audiobook",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"file_type\": \"audiobook\",\n    \"meta_data\":{\n            \"title\": \"hello\",\n            \"author\": \"some author\",\n            \"narrator\": \"some narrator\",\n            \"duration\": 200,\n            \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Podcast",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"file_type\": \"podcast\",\n    \"meta_data\":{\n            \"name\": \"hello\",\n            \"duration\": 200,\n            \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\",\n            \"host\": \"somehost\",\n            \"participants\": \"['hello', 'bye']\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "song",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"file_type\": \"song\",\n    \"meta_data\":{\n            \"name\": \"hello\",\n            \"duration\": 200,\n            \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"hello\",\n    \"duration\": 20000,\n    \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\",\n    \"host\": \"somehost\",\n    \"participants\": \"['hello', 'bye']\"\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/podcast/1/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"podcast",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Podcast",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hello\",\n    \"duration\": 200,\n    \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\",\n    \"host\": \"somehost\",\n    \"participants\": \"['hello', 'bye']\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Audiobook",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"hello\",\n    \"author\": \"some author\",\n    \"narrator\": \"some narrator\",\n    \"duration\": 200,\n    \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "song",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hello\",\n    \"duration\": 400,\n    \"uploaded_time\": \"2022-09-04 06:00:00.000000-08:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/create/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/song/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"song",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "localhost:8000/api"
+		}
+	]
+}
